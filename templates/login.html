@@ -1,27 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="login.css"> <!-- Enlace al archivo CSS -->
-</head>
-<body>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img class="body" src="/static/img/fondo_de_login.png" alt="">
     <div class="container">
-        <h2 class="letras">LOGIN</h2>
-        <form action="verificacion.php" method="post">
-            <label for="usuario" class="letras">Usuario:</label>
-            <input type="text" id="usuario" name="usuario"><br><br>
+      <h2 class="letras">LOGIN</h2>
+      <form action="verificacion.php" method="post">
+        <label for="usuario" class="letras">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" /><br /><br />
 
-            <label for="password" class="letras">Contraseña:</label>
-            <input type="password" id="password" name="password"><br><br>
+        <label for="password" class="letras">Contraseña:</label>
+        <input type="password" id="password" name="password" /><br /><br />
 
-            <button type="submit">INICIAR SESIÓN</button>
-        </form>
+        <button type="submit">INICIAR SESIÓN</button>
+      </form>
     </div>
 
     <!-- Mensaje de error (opcional) -->
     <p id="error"></p>
-</body>
+  </body>
 </html>
