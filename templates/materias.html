@@ -4,48 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title class="titulo2">materias</title>
-  <button id="boton" class="boton">inicio</button>
+  <link rel="stylesheet" href="../css/css/bootstrap.min.css">
+</head> 
+ <body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" >materias</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="./dashboard.html">inicio</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-  <script>
-    const boton = document.getElementById('boton');
-  
-    boton.addEventListener('click', function() {
-      window.open('dashboard..html', '_blank');
-    });
-  </script>
-
-
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #f0f0f0;
-    }
-  </style>
-</head>
-<body>
-  <h1>materias</h1>
-  <table id="tabla">
-    <thead>
-      <tr>
-        <th>materias</th>
-        <th>evaluacion 1</th>
-        <th>evaluacion 2</th>
-        <th>corte</th>
-      </tr>
-    </thead>
-    <tbody id="cuerpo-tabla"></tbody>
-  </table>
-
-  <script src="funciones_materias.js"></script>
-</body>
+ </body>
 </html>
