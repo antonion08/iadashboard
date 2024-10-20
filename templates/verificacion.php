@@ -45,3 +45,4 @@ function closeSession($id_sesion) {
     $sql = "DELETE FROM sesiones WHERE id_sesion = '$id_sesion'";
     $conn->query($sql);
 }
+?>
