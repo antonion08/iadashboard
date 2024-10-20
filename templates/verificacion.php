@@ -8,41 +8,47 @@ $dbname = "sql3738152";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Función para verificar los datos del usuario
-function verifyUser($usuario, $password) {
+// Comprobar la conexión
+if (!$conn) {
+    die("Error al conectar: " . mysqli_connect_error());
+  }
+  
+  // Función para autenticar
+  function autenticar($username, $contrasena, $estatus) {
     global $conn;
-
-    $sql = "SELECT * FROM login WHERE usuario_login = '$usuario' AND contrasena_login = '$password'";
-    $result = $conn->query($sql);
-
+    $query = "SELECT * FROM usuarios WHERE username = '$username' AND contraseña = '$contrasena' AND estatus = ?;";
+    $stmt = mysqli_prepare($conn, $query);
+    mysqli_stmt_bind_param($stmt, 'i', $estatus);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+  
     if ($result->num_rows > 0) {
-        return true;
+      return true;
     } else {
-        return false;
+      return false;
     }
-}
-
-// Función para iniciar sesión
-function initiateSession($usuario, $password) {
-    global $conn;
-
-    // Generar un token de sesion y el datetime de su generación
-    $token = uniqid();
-    $fechahora = date('Y-m-d H:i:s');
-
-    // Insertar el token en la tabla conexiones
-    $sql = "INSERT INTO sesiones (fecha_inicio, token) VALUES ('$fechahora', '$token')";
-    $conn->query($sql);
-
-    return true;
-}
-
-// Función para cerrar sesión
-function closeSession($id_sesion) {
-    global $conn;
-
-    // Eliminar la conexión de la tabla conexiones
-    $sql = "DELETE FROM sesiones WHERE id_sesion = '$id_sesion'";
-    $conn->query($sql);
-}
-?>
+  }
+  
+  // Verificar la autenticación
+  $usuario = $_POST['username'];
+  $contrasena = $_POST['contrasena'];
+  $estatus = $_POST['estatus'];
+  
+  if (autenticar($usuario, $contrasena, $estatus)) {
+    // Si el estatus es 1, envíame a la URL 1
+    if ($estatus == 1) {
+      header('Location: http://example.com/url1');
+      exit;
+    }
+    // Si el estatus es 2, envíame a la URL 2
+    elseif ($estatus == 2) {
+      header('Location: http://example.com/url2');
+      exit;
+    } else {
+      echo "No has sido autenticado";
+    }
+  } else {
+    echo "Error al autenticar";
+  }
+  
+  ?>
