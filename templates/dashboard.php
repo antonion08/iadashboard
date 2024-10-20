@@ -1,4 +1,11 @@
 <?php
+$servername = "sql3.freesqldatabase.com";
+$username = "sql3738152";
+$password = "PnV6EPU17z";
+$dbname = "sql3738152";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
 // Consulta SQL para obtener el nombre del estudiante
 $sql = "SELECT nombre FROM estudiantes WHERE id = 1"; // Ajusta la consulta según tu estructura de tabla
 $result = $conn->query($sql);
