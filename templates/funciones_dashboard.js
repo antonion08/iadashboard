@@ -16,35 +16,33 @@ window.onclick = function(event) {
 
   }
 }
-// chat con la ia 
-async function sendMessageToAPI(message) {
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization':   
- `Bearer YOUR_API_KEY` // Reemplaza con tu clave de API
-    },
-    body: JSON.stringify({
-      model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: message }]
-    })
-  });
+const chatBody = document.querySelector('.chat-body');
+const messageInput = document.getElementById('message-input');
+const sendButton = document.getElementById('send-button');   
 
-  const data = await response.json();
-  return data.choices[0].message.content;   
 
-}
+let messageHistory = [];
 
-// Event listener para el botón de enviar
-sendButton.addEventListener('click', async () => {
-  const message = messageInput.value;
-  addMessage(message, true); // Agrega el mensaje del usuario
-  messageInput.value = '';
+sendButton.addEventListener('click', () => {
+    const message = messageInput.value;
+    if (message) {
+        const newMessage = {
+            text: message,
+            timestamp: new Date().toLocaleString()
+        };
 
-  // En lugar de simular una respuesta, enviamos el mensaje a la API
-  const apiResponse = await sendMessageToAPI(message);
-  addMessage(apiResponse, false); // Agrega la respuesta de la API
+        messageHistory.push(newMessage);
+
+        // Crear un nuevo elemento div para cada mensaje
+        const messageElement = document.createElement('div');
+        messageElement.textContent = `${newMessage.timestamp}: ${newMessage.text}`;
+
+        // Agregar el mensaje al historial visual
+        chatBody.appendChild(messageElement);
+
+        // Limpiar el campo de entrada
+        messageInput.value = '';
+    }
 });
                 //const express = require('express');
                 //const app = express();
