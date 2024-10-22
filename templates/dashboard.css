@@ -57,23 +57,26 @@ a{
 .borde{
     margin: 30px 0 30px;
     margin-left: 20px;
-    background-color: #1425646c;
-    border-style: solid;
-    border: 2px solid #a8f2fe;
-    border-radius: 5px;
+    background-color: #1425647c;
 }
 
 .bordes{
-    margin: 30px 20px 30px;
-    
-    background-color: #1425646c;
-    border-style: solid;
-    border: 2px solid #a8f2fe;
-    border-radius: 5px;
+    margin: 30px 0 30px;
+    margin-right: 50px;
+    margin-left: 110px;
+    background-color: #1425647c; 
 }
+
 
 .bloque1{
     display: flex;
+}
+
+.status{
+    margin: 30px 0 0;
+    margin-left: 20px;
+    background-color: #1425647c;
+    
 }
 
 /*Tu estilo CSS aquí para personalizar la apariencia del chat */
