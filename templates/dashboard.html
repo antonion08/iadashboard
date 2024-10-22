@@ -9,7 +9,7 @@
         <body class="fondo"><main>
 
             <section>
-              <nav class="navbar navbar-expand-lg bg-body-tertiary" class="barras">
+              <nav class="navbar navbar-expand-lg barras" class="barras">
                 <img src="../static/img/logo.png" alt="imagen">
                   <h1 class="titulo">IUPSM</h1>
                   <a class="navbar-brand htt" href="./dashboard.html"><h7 class="txt">Horarios</a>
@@ -51,53 +51,54 @@
                 </div>
 
                 <div class="col-3 borde">
-
-                       <h3 class="letras">Porcentaje del semestre<php echo ;></h3>
-                     </div>
+                   <h3 class="letras">Porcentaje del semestre<php echo ;></h3>
+                    </div>
 
                      <div class="col-3 bordes">
                       <h3 class="letras">¡Cada día es una nueva oportunidad para aprender y crecer!<php echo ;></h3>
                     </div>
                 </div>
 
-                   <div class="col-7 status">
-                      <h3 class="letras">Tareas pendientes del día de hoy:<php echo ;></h3>
-                        
-                        <br><br><br><br><br>
-                  
-                        <h3 class="letras">Tareas pendientes del día de hoy:<php echo ;>
-                        </h3>
-                      
-                    </div>  
+                <div class="bloque1">
+                   <div class="col-3 borde">
+                      <h3 class="letras">Tareas pendientes del día de hoy:<php echo ;> </h3>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <h3 class="letras">Próximos parciales:<php echo ;></h3>
+                     </div>     
+                      <div class="col-3 status">
+                          <h3 class="letras">Estatus de tareas<php echo ;></h3>
+                      </div> 
 
 
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button id="openChat" class="btn btn-primary me-md-2">Iniciar Chat</button>
-                  
-                  <div id="myModal" class="modal" class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <span class="close">&times;</span>
-                       <p>Aquí va el contenido del chat</p>
-                    </div>
-                  <div id="chatWindow" style="display: none;">
-                  </div>
-                </div>
-                <div class="chat-container">
-                  <div class="chat-header">
-                      <h3 class="letras">Direct Chat</h3>
-                      <span class="badge letras">3</span>
-                      <button class="close">X</button>
-                  </div>
-                      <div class="chat-container">
+                      <div class="chat-container statu"> 
                         <div class="chat-header">
                             <h3 class="letras">Chat en vivo</h3>
                         </div>
                         <div class="chat-body">
                             </div>
                         <div class="chat-input">
-                            <input type="text" id="message-input" placeholder="Escribe tu mensaje" class="letras">
-                            <button id="send-button" class="letras">Enviar</button>
+                            <input type="text" id="message-input" placeholder="Escribe tu mensaje" >
+                            <button id="send-button" >Enviar</button>
                         </div>
                     </div>
+
+                  </div> 
+
+                  <div id="myModal" class="modal" class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <span class="close">&times;</span>
+                       <p class="letras">Aquí va el contenido del chat</p>
+                    </div>
+                  <div id="chatWindow" style="display: none;">
+                  </div>
+                </div>
+                <div class="chat-container ">
+
+                     
 <script src="../css/js/bootstrap.bundle.min.js"></script>
 <script src="./funciones_dashboard.js"></script>
 </body>

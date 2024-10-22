@@ -1,6 +1,5 @@
 .fondo{
     background-image: url(../static/img/Interfaz\ Edu\ .png);
-    background-color: #1950A2;
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: 100% 100%;
@@ -35,14 +34,12 @@
     background-color: rgba(0,0,0,0.4); 
   
   }
-.barras{
-    color: #A8F2FE;
-}
+
 
 .htt{
-    border-radius: 20px;
-    border: #A8F2FE solid;
-    background-color: #a8f2fe;
+    border-radius: 50px;
+    background-color: #3700ff4b;
+    padding: 5px 20px 6px 20px;
     
 }
 a{
@@ -58,6 +55,7 @@ a{
     margin: 30px 0 30px;
     margin-left: 20px;
     background-color: #1425647c;
+    padding: 10px 5px;
 }
 
 .bordes{
@@ -65,6 +63,7 @@ a{
     margin-right: 50px;
     margin-left: 110px;
     background-color: #1425647c; 
+    padding: auto;
 }
 
 
@@ -73,10 +72,30 @@ a{
 }
 
 .status{
-    margin: 30px 0 0;
-    margin-left: 20px;
+    margin: 30px 0 30px;
+    margin-left: 0px;
     background-color: #1425647c;
     
+    
+}
+
+.statu{
+    margin: 0 40px 0 ;
+    margin-left: 135px;
+    background-color: #1425647c;
+    padding: 50px 200px 350px 50px
+    
+    ;
+}
+
+.barras{
+    border: 10px solid rgba(255, 0, 0, 0);
+    border-radius: 80px;
+    padding: 10px;
+    color: #1950A2;
+    
+    
+    background-color: #2ec0f1;
 }
 
 /*Tu estilo CSS aquí para personalizar la apariencia del chat */
