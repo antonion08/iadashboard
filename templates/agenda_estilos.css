@@ -14,3 +14,40 @@
     padding: 10px;
     border: 1px solid #ccc;
 }
+
+.titulo{
+    color: #1950a2;
+    margin: 0 20px 0;
+    margin-left: 0;
+    
+}
+.htt{
+    border-radius: 50px;
+    background-color: #3700ff4b;
+    padding: 7px 10px 5px 20px;
+    
+}
+
+.barras{
+    border: 10px solid rgba(255, 0, 0, 0);
+    border-radius: 80px;
+    padding: 10px;
+    color: #1950A2;
+    
+    
+    background-color: #2ec0f1;
+}
+
+.fondo{
+    background-color: #1950a2;
+}
+
+.letras{
+    color: #ffffff;
+    
+}
+
+.bloque1{
+    display: flex;
+}
+
