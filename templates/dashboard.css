@@ -1,18 +1,25 @@
 .fondo{
-    background-image: url(../static/img/PSM.png);
+    background-image: url(../static/img/Interfaz\ Edu\ .png);
     background-color: #1950A2;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
 }
 
 .titulo{
     color: #1950a2;
+    margin: 0 20px 0;
+    margin-left: 0;
+    
 }
 
 .txt{
-    color: #ffffff00;
+    color: #000000;
+    
 }
 
 .letras{
-    color: #fff;
+    color: #ffffff;
 }
 
 .modal {
@@ -29,6 +36,21 @@
   }
 .barras{
     color: #A8F2FE;
+}
+
+.htt{
+    border-radius: 20px;
+    border: #A8F2FE solid;
+    background-color: #a8f2fe;
+    
+}
+a{
+    margin: 0 2px 0;
+    
+}
+
+.navbar-brand{
+    margin: 0 2px 0;
 }
 
 /*Tu estilo CSS aquí para personalizar la apariencia del chat */
