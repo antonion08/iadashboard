@@ -10,8 +10,9 @@
 
             <section>
               <nav class="navbar navbar-expand-lg bg-body-tertiary" class="barras">
-                <span class="border"><img src="../static/img/logo.png" alt="imagen"></span>
-                
+                <img src="../static/img/logo.png" alt="imagen">
+                  <h1 class="titulo">IUPSM</h1>
+                  <h2 class="txt"> gg</h2>
                   <a class="navbar-brand" href="./dashboard.html">Inicio</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,13 +46,13 @@
         <div class="container">
           <div class="row">
             <div class="col-2"div>
-              <img src="<?php echo $rutaImagen; ?>" alt="foto de perfil">
+              <img src="<php echo $rutaImagen; ?>" alt="foto de perfil" class="letras">
             </div>
               <div class="col-3">
-                  <h1 class="letras">Buenos Días <?php echo $nombreEstudiante; ?></h1>
-                  <h3 class="letras">Carrera:<?php echo $carrera_estudiante;</h3>
-                  <h4 class="letras">Semestre <?php echo $semestre_estudiante;?></h4>
-                  <h5 class="letras">Tu Indice es: <?php echo $indice_estudiante;?</h5>
+                  <h1 class="letras">Buenos Días <php echo $nombreEstudiante; ?></h1>
+                  <h3 class="letras">Carrera:<php echo $carrera_estudiante;></h3>
+                  <h4 class="letras">Semestre <php echo $semestre_estudiante;?></h4>
+                  <h5 class="letras">Tu Indice es: <php echo $indice_estudiante;?></h5>
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                   <button id="openChat" class="btn btn-primary me-md-2">Iniciar Chat</button>
@@ -65,13 +66,13 @@
                 </div>
                 <div class="chat-container">
                   <div class="chat-header">
-                      <h3>Direct Chat</h3>
+                      <h3 class="letras">Direct Chat</h3>
                       <span class="badge">3</span>
                       <button class="close">X</button>
                   </div>
                       <div class="chat-container">
                         <div class="chat-header">
-                            <h3>Chat en vivo</h3>
+                            <h3 class="letras">Chat en vivo</h3>
                         </div>
                         <div class="chat-body">
                             </div>

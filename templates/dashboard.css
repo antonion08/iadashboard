@@ -1,5 +1,14 @@
 .fondo{
+    background-image: url(../static/img/PSM.png);
     background-color: #1950A2;
+}
+
+.titulo{
+    color: #1950a2;
+}
+
+.txt{
+    color: #ffffff00;
 }
 
 .letras{
@@ -15,7 +24,7 @@
     width: 50%;
     height: 50%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);   
+    background-color: rgba(0,0,0,0.4); 
   
   }
 .barras{

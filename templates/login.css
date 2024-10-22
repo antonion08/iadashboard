@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: url(/static/img/banner.png);
+    background-image: url(../static/img/PSM.png);
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: 115% 111%;
