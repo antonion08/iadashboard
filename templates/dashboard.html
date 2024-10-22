@@ -41,17 +41,22 @@
                 </div>
               </nav>
         </section>
-        <div class="container">
-          <div class="row">
-            <div class="col-2"div>
-              <img src="<php echo $rutaImagen; ?>" alt="foto de perfil" class="letras">
-            </div>
-              <div class="col-3">
-                  <h1 class="letras">Buenos Días <php echo $nombreEstudiante; ?></h1>
+        <div class="">
+             <div class="bloque1">
+              <div class="col-3 borde">
+             <img src="<php echo $rutaImagen; ?>" alt="foto de perfil" class="letras"> <h1 class="letras">Estudiante<php echo $nombreEstudiante; ?></h1>
                   <h3 class="letras">Carrera:<php echo $carrera_estudiante;></h3>
-                  <h4 class="letras">Semestre <php echo $semestre_estudiante;?></h4>
+                  <h4 class="letras">Semestre: <php echo $semestre_estudiante;?></h4>
                   <h5 class="letras">Tu Indice es: <php echo $indice_estudiante;?></h5>
                 </div>
+
+                <div class="col-3 bordes">
+
+                       <h3 class="letras">Porcentaje del semestre<php echo ;></h3>
+
+                     </div>
+                    </div>
+                
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                   <button id="openChat" class="btn btn-primary me-md-2">Iniciar Chat</button>
                   
@@ -65,7 +70,7 @@
                 <div class="chat-container">
                   <div class="chat-header">
                       <h3 class="letras">Direct Chat</h3>
-                      <span class="badge">3</span>
+                      <span class="badge letras">3</span>
                       <button class="close">X</button>
                   </div>
                       <div class="chat-container">
@@ -75,8 +80,8 @@
                         <div class="chat-body">
                             </div>
                         <div class="chat-input">
-                            <input type="text" id="message-input" placeholder="Escribe tu mensaje">
-                            <button id="send-button">Enviar</button>
+                            <input type="text" id="message-input" placeholder="Escribe tu mensaje" class="letras">
+                            <button id="send-button" class="letras">Enviar</button>
                         </div>
                     </div>
 <script src="../css/js/bootstrap.bundle.min.js"></script>

@@ -20,6 +20,7 @@
 
 .letras{
     color: #ffffff;
+    margin-left: 20px;
 }
 
 .modal {
@@ -51,6 +52,28 @@ a{
 
 .navbar-brand{
     margin: 0 2px 0;
+}
+
+.borde{
+    margin: 30px 0 30px;
+    margin-left: 20px;
+    background-color: #1425646c;
+    border-style: solid;
+    border: 2px solid #a8f2fe;
+    border-radius: 5px;
+}
+
+.bordes{
+    margin: 30px 20px 30px;
+    
+    background-color: #1425646c;
+    border-style: solid;
+    border: 2px solid #a8f2fe;
+    border-radius: 5px;
+}
+
+.bloque1{
+    display: flex;
 }
 
 /*Tu estilo CSS aquí para personalizar la apariencia del chat */
