@@ -21,3 +21,33 @@
 .barras{
     color: #A8F2FE;
 }
+
+/*Tu estilo CSS aquí para personalizar la apariencia del chat */
+
+.chat-container {
+    /* Estilos para el contenedor del chat */
+}
+
+.chat-header {
+    /* Estilos para el encabezado del chat */
+}
+
+.chat-messages {
+    /* Estilos para el área de mensajes */
+}
+
+.message {
+    /* Estilos para cada mensaje */
+}
+
+.user {
+    /* Estilos para mensajes del usuario */
+}
+
+.bot {
+    /* Estilos para mensajes del bot */
+}
+
+.chat-input {
+    /* Estilos para el campo de entrada de mensajes */
+}
