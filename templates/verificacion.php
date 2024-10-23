@@ -14,11 +14,11 @@ if (!$conn) {
   }
   
   // Función para autenticar
-  function autenticar($username, $contrasena, $estatus) {
+  function autenticar($username, $contrasena) {
     global $conn;
     $query = "SELECT * FROM login WHERE username = '$username' AND password = '$contrasena'";
     $stmt = mysqli_prepare($conn, $query);
-    mysqli_stmt_bind_param($stmt, 'i');
+    //mysqli_stmt_bind_param($stmt, 'i');
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
   
@@ -30,12 +30,12 @@ if (!$conn) {
   }
   
   // Verificar la autenticación
-  $usuario = $_POST['username'];
-  $contrasena = $_POST['contrasena'];
+  $usuario = $_POST['usuario'];
+  $contrasena = $_POST['password'];
   
   if (autenticar($usuario, $contrasena)) {
-    header('http://localhost/Github/iadashboard/templates/dashboard.html');
-    exit;
+    header('Location: dashboard.html');
+    exit();
   } else {
     echo "Error al autenticar.";
   }
