@@ -1,6 +1,6 @@
 /* Estilos personalizados para tu calendario */
 .fondo{
-    background-image: url(../static/img/Interfaz\ Edu\ .png);
+    background-image: url(../static/img/fondo_de_login.png);
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: 100% 100%;
@@ -12,17 +12,22 @@
 
 
 .titulo{
-    color: #1950a2;
+    color: #f8f8f8;
     margin: 0 20px 0;
     margin-left: 0;
     
 }
 .htt{
-    border-radius: 50px;
-    background-color: #3700ff4b;
-    padding: 5px 20px 6px 20px;
-    
+        border-radius: 20px;
+        background-color: #f6f7f6be;
+        padding: 6px 45px 10px 20px;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #000000;
+        
 }
+    
+
 
 a{
     margin: 0 2px 0;
@@ -36,12 +41,27 @@ a{
     border-radius: 80px;
     padding: 10px;
     color: #1950A2;
-    
-    
-    background-color: #2ec0f1;
+    background-color: #0627949c;
 }
 
 .letras{
     color: white;
     text-align: center;
 }
+
+body {
+    background: #d3cce3; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e9e4f0, #d3cce3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e9e4f0, #d3cce3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.centered {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.equipo{
+    width: 200px;
+   
+   }
+   
