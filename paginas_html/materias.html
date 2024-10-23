@@ -1,25 +1,93 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title class="titulo2">materias</title>
-  <link rel="stylesheet" href="../css/css/bootstrap.min.css">
-</head> 
- <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" >materias</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="./dashboard.html">inicio</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Materias</title>
 
- </body>
+         <link rel="stylesheet" href="/estilos_css/materias.css"/>
+        <!-- Bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+        <!-- DataTable -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Custom CSS -->
+       
+    </head>
+    <body class="fondo">
+
+      <section>
+        <nav class="navbar navbar-expand-lg barras" >
+          <img src="../static/img/logo.png" alt="imagen">
+            <h1 class="titulo">IUPSM</h1>
+            <a class="navbar-brand" href="../paginas_html/dashboard.html"><h7 class="htt">Horarios</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item ">
+                  <a class="nav-link  active htt" aria-current="page"  href="../paginas_html/agenda.html"><h7 class=""> Calendario y Agenda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active htt" aria-current="page" href="../paginas_html/notas.html"><h7 class="">Notas</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle htt" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <h7 class="">Redes Sociales
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="https://www.facebook.com/psmcaracasoficial">Facebook</a></li>
+                    <li><a class="dropdown-item" href="https://www.instagram.com/psmcaracasoficial/">Instagram</a></li>
+                    <li><a class="dropdown-item" href="https://www.tiktok.com/@psmcaracasoficial">Tiktok</a></li>
+                  </ul>
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <img src="../static/img/logo_equipo.png" alt="imagen" class="imagen">
+          </div>
+        </nav>
+  </section>
+
+        <div class="container my-4 txt">
+            <div class="row ">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <table id="datatable_users" class="table">
+                        <caption class="txt">
+                            DataTable.js Demo
+                        </caption>
+                        <thead class="txt">
+                            <tr>
+                                <th class="centered">#</th>
+                                <th class="centered">Nombre</th>
+                                <th class="centered">Email</th>
+                                <th class="centered">Ciudad</th>
+                                <th class="centered">Compañia</th>
+                                <th class="centered">Status</th>
+                                <th class="centered">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody_users" class="txt"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <!-- jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- DataTable -->
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+        <!-- Custom JS -->
+        <script src="/funcionalidades_js/main.js"></script>
+    </body>
 </html>
