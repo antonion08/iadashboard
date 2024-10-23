@@ -4,7 +4,8 @@
         <title>Agenda</title>
         <head>
           <link rel="stylesheet" href="../css/css/bootstrap.min.css">
-          <link rel="stylesheet" href="agenda_estilos.css">
+          <link rel="stylesheet" href="../estilos_css/agenda_estilos.css">
+          <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
         </head>
         <body class="fondo"><main>
 
@@ -12,15 +13,14 @@
               <nav class="navbar navbar-expand-lg barras" >
                 <img src="../static/img/logo.png" alt="imagen">
                   <h1 class="titulo">IUPSM</h1>
-                  <a class="navbar-brand" href="./dashboard.html"><h7 class="htt">Horarios</a>
-
+                  <a class="navbar-brand" href="../paginas_html/dashboard.html"><h7 class="htt">Horarios</a>
                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                       <li class="nav-item ">
-                        <a class="nav-link  active htt" aria-current="page"  href="./agenda.html"><h7 class="txt"> Calendario y Agenda</a>
+                        <a class="nav-link  active htt" aria-current="page"  href="../paginas_html/agenda.html"><h7 class="txt"> Calendario y Agenda</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active htt" aria-current="page" href="./notas.html"><h7 class="txt">Notas</a>
+                        <a class="nav-link active htt" aria-current="page" href="../paginas_html/notas.html"><h7 class="txt">Notas</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle htt" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -36,38 +36,20 @@
                     </ul>
                   </div>
                 </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <img src="../static/img/logo_equipo.png" alt="imagen" class="imagen">
+                </div>
               </nav>
         </section>
 
         <div class="bloque1">
-          <h1>Calendario Estudiantil</h1> 
-          <h1>Agenda Mensual</h1>
+          <h1 class="letras">Calendario Estudiantil</h1> 
+          <h1 class="letras">Agenda Mensual</h1>
           </div>
-          
-          <div class="">
-          
-          <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Lunes</th>
-              <th>Martes</th>
-              <th>Miércoles</th>
-              <th>Jueve</th>
-              <th>Viernes</th>
-              <th>Sábado</th>
-              <th>Domingo</th>
-            </tr>
-          </thead>
-          <tbody>
-            </tbody>
-          </table>
-          </div>
-          
-          <script src="funciones_agenda.js"></script>
+          <div id="calendar" style="max-width: 1000px;margin: auto;" class="calendar"></div>
           <script src="../css/js/bootstrap.bundle.min.js"></script>
-
 <script src="../css/js/bootstrap.bundle.min.js"></script>
-<script src="./funciones_dashboard.js"></script>
+<script src="../funcionalidades_js/calendario.js"></script>
 </body>
     </main>
 </body></html>

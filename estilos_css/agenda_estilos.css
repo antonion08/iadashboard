@@ -1,0 +1,56 @@
+/* Estilos personalizados para tu calendario */
+.fondo{
+    background-image: url(../static/img/fondo_de_login.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
+.titulo{
+    color: #f6faff;
+    margin: 0 20px 0;
+    margin-left: 0;
+    
+}
+.htt{
+    border-radius: 20px;
+    background-color: #f6f7f6be;
+    padding: 6px 60px 10px 20px;
+    text-align: center;
+    
+}
+
+a{
+    margin: 0 2px 0;
+    
+}
+.navbar-brand{
+    margin: 0 2px 0;
+}
+
+.barras{
+    border: 10px solid rgba(255, 0, 0, 0);
+    border-radius: 40px;
+    padding: 10px;
+    color: #1950A2;
+    background-color: #0627949c;
+}
+
+.calendar{
+    background-color: #0627949c;
+    color: rgb(255, 255, 255);
+    
+}
+
+.letras{
+    color: white;
+    text-align: center;
+    padding: 6px 60px 10px 20px;
+}
+
+ .imagen{
+
+    width: 200px;
+ }
+
+ 
