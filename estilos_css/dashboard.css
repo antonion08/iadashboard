@@ -11,6 +11,31 @@
     margin-left: 0;
     
 }
+
+.txt{
+    color: #000000;
+    
+}
+
+.letras{
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+  
+  }
+
+
 .htt{
     border-radius: 50px;
     background-color: #3700ff4b;
@@ -40,6 +65,8 @@ a{
     background-color: #1425647c; 
     padding: auto;
 }
+
+
 .bloque1{
     display: flex;
 }
@@ -56,7 +83,7 @@ a{
     margin: 0 40px 0 ;
     margin-left: 135px;
     background-color: #1425647c;
-    padding: 10px 100px 10px 100px
+    padding: 50px 200px 50px 50px
     
     ;
 }
@@ -71,28 +98,32 @@ a{
     background-color: #2ec0f1;
 }
 
-.txt{
-    color: #000000;
-    
+/*Tu estilo CSS aquí para personalizar la apariencia del chat */
+
+.chat-container {
+    /* Estilos para el contenedor del chat */
 }
 
-.letras{
-    color: #ffffff;
-    margin-left: 20px;
+.chat-header {
+    /* Estilos para el encabezado del chat */
 }
 
-body {
-    background: #d3cce3; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e9e4f0, #d3cce3); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e9e4f0, #d3cce3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.chat-messages {
+    /* Estilos para el área de mensajes */
 }
 
-.centered {
-    text-align: center !important;
-    vertical-align: middle !important;
-     
+.message {
+    /* Estilos para cada mensaje */
 }
 
-.txt{
-color: #ffffff;
+.user {
+    /* Estilos para mensajes del usuario */
+}
+
+.bot {
+    /* Estilos para mensajes del bot */
+}
+
+.chat-input {
+    /* Estilos para el campo de entrada de mensajes */
 }
