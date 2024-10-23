@@ -6,6 +6,11 @@
     background-size: 100% 100%;
 }
 
+.container {
+    text-align: center;
+}
+
+
 .titulo{
     color: #1950a2;
     margin: 0 20px 0;
@@ -26,17 +31,19 @@ a{
 .navbar-brand{
     margin: 0 2px 0;
 }
-
 .barras{
     border: 10px solid rgba(255, 0, 0, 0);
     border-radius: 80px;
     padding: 10px;
     color: #1950A2;
+    
+    
     background-color: #2ec0f1;
 }
 
+.letras{
+    color: white;
+    text-align: center;
+}
 
 
- 
-
- 
