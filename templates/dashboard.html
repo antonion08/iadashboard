@@ -5,6 +5,7 @@
         <head>
           <link rel="stylesheet" href="../css/css/bootstrap.min.css">
           <link rel="stylesheet" href="dashboard.css">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
         </head>
         <body class="fondo"><main>
 
@@ -73,10 +74,21 @@
 
 
                       <div class="chat-container statu"> 
-                        <h1>¡Habla con Santi!</h1>
-    <input type="text" id="inputText" placeholder="Escribe tu mensaje...">
-    <button id="generateButton" type="submit">Enviar</button>
-    <p id="responseText"></p>
+ 
+                          <form action="/action_page.php" class="form-container">
+                            <h1>¡Habla con Santi!</h1>
+                        
+                            <label for="msg"><b>Mensaje</b></label>
+                            <textarea placeholder="Tipo de Mensaje.." name="msg" required></textarea>
+                          <div class="container">
+                            <div class="">
+                            <button type="submit" class="button">Enviar</button>
+                          </div>
+                        </div>
+                          </form>
+                          </div>
+                        
+
 
     <script type="importmap">
         {
