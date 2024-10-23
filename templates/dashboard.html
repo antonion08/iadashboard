@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
         <head><meta charset="utf-8"></head>
         <title>dashboard</title>
         <head>
@@ -76,12 +76,57 @@
                         <div class="chat-header">
                             <h3 class="letras">Chat en vivo</h3>
                         </div>
-                        <div class="chat-body">
-                            </div>
+                        <div class="chat-body"></div>
                         <div class="chat-input">
                             <input type="text" id="message-input" placeholder="Escribe tu mensaje" >
                             <button id="send-button" >Enviar</button>
                         </div>
+                        <script type="importmap">
+                          {
+                            "imports": {
+                                        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+                                        }
+                          }
+                        </script>
+                        <script type="module">
+                          import { GoogleGenerativeAI } from "@google/generative-ai";
+
+                          // Variables de la IA
+                          const API_KEY = 'AIzaSyBPrmcKrduHdoHCWxKjB-rbLNvROAbN7OQ';
+                          const genAI = new GoogleGenerativeAI(API_KEY);
+
+                          // Variable para diferenciar los mensajes
+                          let contador = 1;
+
+                          // Acciones cuando se presiona el botón enviar
+                          document.getElementById('send-button').addEventListener('click', async () => {
+                              const inputText = document.getElementById('message-input').value;
+                              // Si hay texto en la caja:
+                              if (true) {
+                                // Consultar a la IA
+                                const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest"});
+                                const prompt = inputText;
+                                const result = await model.generateContent(prompt);
+                                const response = await result.response;
+                                const mensajeUsu = {
+                                  text: inputText,
+                                  timestamp: new Date().toLocaleString()
+                                };
+
+                                // Agregar dos div: uno con el mensaje del usuario y el otro con la respuesta
+                                const divUsu = document.createElement('msgUsu' + contador);
+                                divUsu.textContent = `${mensajeUsu.timestamp}: ${mensajeUsu.text}`;
+                                const divBot = document.createElement('msgBot' + contador);
+                                divBot.textContent = response.text();
+
+                                // Agregar los mensajes al chat
+                                const chatBody = document.querySelector('.chat-body');
+                                chatBody.appendChild(divUsu);
+                                chatBody.appendChild(divBot);
+                                contador++;
+                              }
+                            });
+                        </script>
                     </div>
 
                   </div> 
