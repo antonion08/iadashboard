@@ -1,10 +1,10 @@
 <?php
 
 // Conexión a la base de datos
-$servername = "sql3.freesqldatabase.com";
-$username = "sql3738152";
-$password = "PnV6EPU17z";
-$dbname = "sql3738152";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "bd_edudash";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
