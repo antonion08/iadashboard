@@ -68,3 +68,11 @@ button[type="submit"]:hover {
     color: red;
 }
 
+.logop{
+
+    width: 200px;
+    position: absolute;
+    top: 5px;
+    left: 85%;
+    
+}

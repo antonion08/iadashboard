@@ -110,6 +110,16 @@ a{
     min-height: 200px;
 }
 
+.form-container p {
+    width: 100%;
+    padding: 4px;
+    margin: 5px 0 2px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+
 .form-container {
     max-width: 700px;
     padding: 20px;

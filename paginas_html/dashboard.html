@@ -70,56 +70,43 @@
                       </div> 
 
 
-                      <div class="chat-container statu"> 
+<div class="chat-container statu"> 
                         <form class="form-container">
                          
                           <h1>¡Habla con Santi!</h1>
-                          <textarea placeholder="Escribe tu mensaje..." name="msg" required></textarea>
-                         <button id="generateButton" type="submit" class="button">Enviar</button>
-                          
-                          
+                          <textarea placeholder="Escribe tu mensaje..." id="msg" required></textarea>
+                          <button id="generateButton" type="submit" class="button">Enviar</button>
+                          <p class="responseText" id="responseText"></p>
+                          <script type="importmap">
+                            {
+                              "imports": {
+                                "@google/generative-ai": "https://esm.run/@google/generative-ai"
+                              }
+                            }
+                          </script>
+
+                          <script type="module">
+                            import { GoogleGenerativeAI } from "@google/generative-ai";
+                            // Reemplaza 'YOUR_API_KEY' con tu clave de API real
+                            const API_KEY = 'AIzaSyBAxL6H0sqb2TIx_IsJh6qx98KAfE0qzQM';
+                            const genAI = new GoogleGenerativeAI(API_KEY);
+                            document.getElementById('generateButton').addEventListener('click', async () => {
+                              event.preventDefault();
+                              const inputText = document.getElementById('msg').value;
+                              const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro"});
+                              const prompt = inputText;
+                              try {
+                                const result = await model.generateContent(prompt);
+                                const response = await result.response;
+                                document.getElementById('responseText').innerText = response.text();
+                              } catch (error) {
+                                console.error('Error al generar contenido:', error);
+                              }
+                            });
+                          </script>
                         </form>
-
-                        
     <!-- <input type="text" id="inputText" placeholder="Escribe tu mensaje..."> -->
-    
-    <p id="responseText"></p>
 
-    <script type="importmap">
-        {
-          "imports": {
-            "@google/generative-ai": "https://esm.run/@google/generative-ai"
-          }
-        }
-    </script>
-    <script type="module">
-        import { GoogleGenerativeAI } from "@google/generative-ai";
-
-        // Reemplaza 'YOUR_API_KEY' con tu clave de API real
-        const API_KEY = 'AIzaSyBAxL6H0sqb2TIx_IsJh6qx98KAfE0qzQM';
-        const genAI = new GoogleGenerativeAI(API_KEY);
-
-        document.getElementById('generateButton').addEventListener('click', async () => {
-            const inputText = document.getElementById('inputText').value;
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro"});
-            const prompt = inputText;
-
-            try {
-                const result = await model.generateContent(prompt);
-                const response = await result.response;
-                document.getElementById('responseText').innerText = response.text();
-            } catch (error) {
-                console.error('Error al generar contenido:', error);
-            }
-        });
-    </script>
-                        <script type="importmap">
-                          {
-                            "imports": {
-                                        "@google/generative-ai": "https://esm.run/@google/generative-ai"
-                                        }
-                          }
-                        </script>
                     </div>
 
                   </div> 
