@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: url(../static/img/PSM.png);
+    background-image: url(../static/img/fondo_de_login.png);
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: 115% 111%;
@@ -73,6 +73,6 @@ button[type="submit"]:hover {
     width: 200px;
     position: absolute;
     top: 5px;
-    left: 85%;
+    left: 43%;
     
 }
