@@ -73,39 +73,14 @@
 
 
                       <div class="chat-container statu"> 
-                        <h1>¡Habla con Santi!</h1>
-    <input type="text" id="inputText" placeholder="Escribe tu mensaje...">
-    <button id="generateButton" type="submit">Enviar</button>
-    <p id="responseText"></p>
-
-    <script type="importmap">
-        {
-          "imports": {
-            "@google/generative-ai": "https://esm.run/@google/generative-ai"
-          }
-        }
-    </script>
-    <script type="module">
-        import { GoogleGenerativeAI } from "@google/generative-ai";
-
-        // Reemplaza 'YOUR_API_KEY' con tu clave de API real
-        const API_KEY = 'AIzaSyBPrmcKrduHdoHCWxKjB-rbLNvROAbN7OQ';
-        const genAI = new GoogleGenerativeAI(API_KEY);
-
-        document.getElementById('generateButton').addEventListener('click', async () => {
-            const inputText = document.getElementById('inputText').value;
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro"});
-            const prompt = inputText;
-
-            try {
-                const result = await model.generateContent(prompt);
-                const response = await result.response;
-                document.getElementById('responseText').innerText = response.text();
-            } catch (error) {
-                console.error('Error al generar contenido:', error);
-            }
-        });
-    </script>
+                        <div class="chat-header">
+                            <h3 class="letras">Chat en vivo</h3>
+                        </div>
+                        <div class="chat-body"></div>
+                        <div class="chat-input">
+                            <input type="text" id="message-input" placeholder="Escribe tu mensaje" >
+                            <button id="send-button" >Enviar</button>
+                        </div>
                         <script type="importmap">
                           {
                             "imports": {
