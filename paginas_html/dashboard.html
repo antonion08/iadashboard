@@ -74,9 +74,18 @@
 
 
                       <div class="chat-container statu"> 
-                        <h1>¡Habla con Santi!</h1>
-    <input type="text" id="inputText" placeholder="Escribe tu mensaje...">
-    <button id="generateButton" type="submit">Enviar</button>
+                        <form class="form-container">
+                         
+                          <h1>¡Habla con Santi!</h1>
+                          <textarea placeholder="Escribe tu mensaje..." name="msg" required></textarea>
+                         <button id="generateButton" type="submit" class="button">Enviar</button>
+                          
+                          
+                        </form>
+
+                        
+    <!-- <input type="text" id="inputText" placeholder="Escribe tu mensaje..."> -->
+    
     <p id="responseText"></p>
 
     <script type="importmap">

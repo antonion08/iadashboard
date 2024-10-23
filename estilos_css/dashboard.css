@@ -80,10 +80,10 @@ a{
 }
 
 .statu{
-    margin: 0 40px 0 ;
+    margin: 0 40px 0  ;
     margin-left: 135px;
     background-color: #1425647c;
-    padding: 50px 200px 50px 50px
+    padding: 10px 50px 5px 10px
     
     ;
 }
@@ -98,6 +98,37 @@ a{
     background-color: #2ec0f1;
 }
 
+
+.form-container textarea {
+    width: 100%;
+    padding: 4px;
+    margin: 5px 0 2px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+
+.form-container {
+    max-width: 700px;
+    padding: 20px;
+    background-color: white;
+    margin: 1px 0px 0 10px;
+}
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.button{
+    background-color: #1950a2;
+}
 /*Tu estilo CSS aquí para personalizar la apariencia del chat */
 
 .chat-container {
