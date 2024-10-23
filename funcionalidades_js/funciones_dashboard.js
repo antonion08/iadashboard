@@ -23,7 +23,7 @@ const sendButton = document.getElementById('send-button');  
 
 let messageHistory = [];
 
-sendButton.addEventListener('click', () => {
+/*sendButton.addEventListener('click', () => {
     const message = messageInput.value;
     if (message) {
         const newMessage = {
@@ -53,3 +53,5 @@ sendButton.addEventListener('click', () => {
                     //this.apiUrl = https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent;
                    // this.tokenDeAutorizacion = AIzaSyC76BoVVmx7svNQQRtRB7sjgMLK4FEkfBU;
                  // }
+
+*/

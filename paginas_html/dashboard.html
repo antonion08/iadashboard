@@ -5,6 +5,7 @@
         <head>
           <link rel="stylesheet" href="../css/css/bootstrap.min.css">
           <link rel="stylesheet" href="../estilos_css/dashboard.css">
+          <link rel="stylesheet" href="../estilos_css/agenda_estilos.css">
         </head>
         <body class="fondo"><main>
 
@@ -41,10 +42,10 @@
         <div class="">
              <div class="bloque1">
               <div class="col-3 borde">
-             <img src="/static/img/PSM.png" alt="foto de perfil" class="letras"> <h1 class="letras">Estudiante<php echo $nombreEstudiante; ?></h1>
-                  <h3 class="letras">Carrera:<php echo $carrera_estudiante;>Ing Sistemas</h3>
+             <img src="<php echo $rutaImagen; ?>" alt="foto de perfil" class="letras"> <h1 class="letras">Estudiante:<br>Jerrys Lugo</h1>
+                  <h3 class="letras">Carrera:<php echo $carrera_estudiante;>Ing. Sistemas</h3>
                   <h3 class="letras">Semestre: <php echo $semestre_estudiante;?> 3</h3>
-                  <h3 class="letras">Tu Indice es: <php echo $indice_estudiante;?> 13,2</h3>
+                  <h3 class="letras">Tu índice es: <php echo $indice_estudiante;?> 13,2</h3>
                 </div>
 
                 <div class="col-3 borde">
@@ -89,7 +90,7 @@
         import { GoogleGenerativeAI } from "@google/generative-ai";
 
         // Reemplaza 'YOUR_API_KEY' con tu clave de API real
-        const API_KEY = 'AIzaSyBPrmcKrduHdoHCWxKjB-rbLNvROAbN7OQ';
+        const API_KEY = 'AIzaSyBAxL6H0sqb2TIx_IsJh6qx98KAfE0qzQM';
         const genAI = new GoogleGenerativeAI(API_KEY);
 
         document.getElementById('generateButton').addEventListener('click', async () => {
@@ -112,45 +113,6 @@
                                         "@google/generative-ai": "https://esm.run/@google/generative-ai"
                                         }
                           }
-                        </script>
-                        <script type="module">
-                          import { GoogleGenerativeAI } from "@google/generative-ai";
-
-                          // Variables de la IA
-                          const API_KEY = 'AIzaSyBPrmcKrduHdoHCWxKjB-rbLNvROAbN7OQ';
-                          const genAI = new GoogleGenerativeAI(API_KEY);
-
-                          // Variable para diferenciar los mensajes
-                          let contador = 1;
-
-                          // Acciones cuando se presiona el botón enviar
-                          document.getElementById('send-button').addEventListener('click', async () => {
-                              const inputText = document.getElementById('message-input').value;
-                              // Si hay texto en la caja:
-                              if (true) {
-                                // Consultar a la IA
-                                const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest"});
-                                const prompt = inputText;
-                                const result = await model.generateContent(prompt);
-                                const response = await result.response;
-                                const mensajeUsu = {
-                                  text: inputText,
-                                  timestamp: new Date().toLocaleString()
-                                };
-
-                                // Agregar dos div: uno con el mensaje del usuario y el otro con la respuesta
-                                const divUsu = document.createElement('msgUsu' + contador);
-                                divUsu.textContent = `${mensajeUsu.timestamp}: ${mensajeUsu.text}`;
-                                const divBot = document.createElement('msgBot' + contador);
-                                divBot.textContent = response.text();
-
-                                // Agregar los mensajes al chat
-                                const chatBody = document.querySelector('.chat-body');
-                                chatBody.appendChild(divUsu);
-                                chatBody.appendChild(divBot);
-                                contador++;
-                              }
-                            });
                         </script>
                     </div>
 
